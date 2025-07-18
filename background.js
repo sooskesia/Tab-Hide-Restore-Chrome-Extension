@@ -84,7 +84,15 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   } else {
     // Tabs are currently hidden — restore them back to original window
     try {
-      const originalWindow = await chrome.windows.get(originalWindowId);
+     let originalWindow;
+      try {
+        originalWindow = await chrome.windows.get(originalWindowId);
+      } catch {
+        console.warn("Original window no longer exists.");
+        await clearState();
+        return;
+      }
+
       const hiddenWindow = await chrome.windows.get(hiddenWindowId, { populate: true });
 
       // Move all hidden tabs back to the original window
