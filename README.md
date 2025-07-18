@@ -1,6 +1,6 @@
 # Tab Hide & Restore Chrome Extension
 
-A lightweight Chrome Extension that lets you **temporarily hide all tabs to the right of the active tab** and restore them later with one click. This helps reduce browser clutter and improve focus without losing your open tabs.
+A Chrome Extension that lets you **temporarily hide all tabs to the right of the active tab** and restore them later with one click. This helps reduce browser clutter and improve focus without losing your open tabs.
 
 ---
 
